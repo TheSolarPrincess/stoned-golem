@@ -4,7 +4,6 @@ using System.Collections;
 public class Squishy : MonoBehaviour {
 
 	public GameObject splat;
-	public int pointsForKill;
 	public bool isGuard = false;
 
 	public void Squish() {
