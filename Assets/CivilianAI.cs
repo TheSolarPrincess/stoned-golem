@@ -3,8 +3,9 @@ using System.Collections;
 
 public class CivilianAI : MonoBehaviour {
 
-	public float walkativity = 1f;
-	public float scareRange = 1f;
+	public float walkativity = 3f;
+	public float scareRange = 4f;
+	public float caffeinatedness = 0.125f;
 
 	public float idleSpeed = 3;
 	public float scaredSpeed = 5;
@@ -22,6 +23,11 @@ public class CivilianAI : MonoBehaviour {
 		if ((transform.position - scaryThing.transform.position).magnitude < scareRange) {
 			navMeshAgent.SetDestination (Away (scaryThing.transform.position));
 			navMeshAgent.speed = scaredSpeed;
+		} else if (navMeshAgent.remainingDistance < caffeinatedness * walkativity) {
+			Vector2 randomDestination = Random.insideUnitCircle;
+			Vector3 destination = transform.position + new Vector3 (randomDestination.x, 0, randomDestination.y) * walkativity;
+			navMeshAgent.SetDestination(destination);
+			navMeshAgent.speed = idleSpeed;
 		}
 	}
 

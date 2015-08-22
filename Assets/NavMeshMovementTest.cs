@@ -16,7 +16,7 @@ public class NavMeshMovementTest : MonoBehaviour {
 	void FixedUpdate () {
 		float h = Input.GetAxis ("Horizontal");
 		float v = Input.GetAxis ("Vertical");
-		Vector3 move = new Vector3 (v, 0, -h);
+		Vector3 move = new Vector3 (h, 0, v);
 		//characterController.Move (move);
 		//navMeshAgent.Move (move);
 		//navMeshAgent.SetDestination (transform.position + move);
