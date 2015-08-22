@@ -1,0 +1,128 @@
+fileFormatVersion: 2
+guid: 5221b20f7f9bf7849aa3fa074f6ac4e0
+timeCreated: 1440255883
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: chest
+    100002: Golem
+    100004: //RootNode
+    100006: head
+    100008: legs
+    100010: LHand1
+    100012: LHand_Elbow
+    100014: LHand_Fist
+    100016: LHand_Shoulder
+    100018: Ref
+    100020: Ref_Front
+    100022: Ref_Side
+    100024: RHand1
+    100026: RHand_Elbow
+    100028: RHand_Fist
+    100030: RHand_Shoulder
+    400000: chest
+    400002: Golem
+    400004: //RootNode
+    400006: head
+    400008: legs
+    400010: LHand1
+    400012: LHand_Elbow
+    400014: LHand_Fist
+    400016: LHand_Shoulder
+    400018: Ref
+    400020: Ref_Front
+    400022: Ref_Side
+    400024: RHand1
+    400026: RHand_Elbow
+    400028: RHand_Fist
+    400030: RHand_Shoulder
+    2300000: chest
+    2300002: head
+    2300004: legs
+    2300006: LHand_Elbow
+    2300008: LHand_Fist
+    2300010: LHand_Shoulder
+    2300012: RHand_Elbow
+    2300014: RHand_Fist
+    2300016: RHand_Shoulder
+    3300000: chest
+    3300002: head
+    3300004: legs
+    3300006: LHand_Elbow
+    3300008: LHand_Fist
+    3300010: LHand_Shoulder
+    3300012: RHand_Elbow
+    3300014: RHand_Fist
+    3300016: RHand_Shoulder
+    4300000: legs
+    4300002: chest
+    4300004: head
+    4300006: RHand_Shoulder
+    4300008: RHand_Elbow
+    4300010: RHand_Fist
+    4300012: LHand_Shoulder
+    4300014: LHand_Elbow
+    4300016: LHand_Fist
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
