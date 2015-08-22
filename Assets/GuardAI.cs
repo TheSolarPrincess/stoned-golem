@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class GuardAI : MonoBehaviour {
-
 	public GameObject ArrowType;
 
 	public float walkativity = 3f;
@@ -22,11 +21,13 @@ public class GuardAI : MonoBehaviour {
 	private float shootProgress = 0f;
 	private GameObject scaryThing;
 	private NavMeshAgent navMeshAgent;
+	private StabilityTracker tracker;
 	
 	// Use this for initialization
 	void Start () {
 		scaryThing = GameObject.FindGameObjectWithTag ("Player");
 		navMeshAgent = GetComponent<NavMeshAgent> ();
+		tracker = GameObject.FindGameObjectWithTag ("GameController").GetComponent<StabilityTracker> ();
 	}
 	
 	void Update () {
@@ -34,10 +35,10 @@ public class GuardAI : MonoBehaviour {
 		if (distanceToPlayer < scareRange) {
 			navMeshAgent.SetDestination (Away (scaryThing.transform.position));
 			navMeshAgent.speed = scaredSpeed;
-		} else if (distanceToPlayer < bowRange) {
+		} else if (distanceToPlayer < bowRange && !tracker.playerAlive) {
 			navMeshAgent.ResetPath();
 			Shoot();
-		} else if (distanceToPlayer < chaseRange) {
+		} else if (distanceToPlayer < chaseRange && !tracker.playerAlive) {
 			navMeshAgent.SetDestination (scaryThing.transform.position);
 		} else if (navMeshAgent.remainingDistance < caffeinatedness * walkativity) {
 			Vector2 randomDestination = Random.insideUnitCircle;

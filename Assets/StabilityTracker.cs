@@ -11,7 +11,16 @@ public class StabilityTracker : MonoBehaviour {
 	public float lossPerSecond = 50;
 	public float lossFromArrow = 70;
 
+	public GameObject displayOnGameEnd;
+	public float displayDelay = 2f;
+
 	private float stability;
+
+	public bool playerAlive {
+		get {
+			return (stability <= 0);
+		}
+	}
 
 	void Start () {
 		stability = initialStability;
@@ -26,11 +35,16 @@ public class StabilityTracker : MonoBehaviour {
 	}
 
 	private void StopThis() {
-		Debug.Log ("Boom!");
 		GameObject player = GameObject.FindGameObjectWithTag ("Player");
 		player.GetComponent<NavMeshMovementTest> ().enabled = false;
 		player.GetComponent<CanExplode> ().Explode ();
+		StartCoroutine (DisplayScoreboard());
 		this.enabled = false;
+	}
+
+	private IEnumerator DisplayScoreboard() {
+		yield return new WaitForSeconds (displayDelay);
+		displayOnGameEnd.SetActive (true);
 	}
 
 	public void HurtWithArrow() {
