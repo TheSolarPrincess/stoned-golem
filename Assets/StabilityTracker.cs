@@ -36,7 +36,7 @@ public class StabilityTracker : MonoBehaviour {
 
 	private void StopThis() {
 		GameObject player = GameObject.FindGameObjectWithTag ("Player");
-		player.GetComponent<NavMeshMovementTest> ().enabled = false;
+		player.GetComponent<Movement> ().enabled = false;
 		player.GetComponent<CanExplode> ().Explode ();
 		StartCoroutine (DisplayScoreboard());
 		this.enabled = false;
