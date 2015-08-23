@@ -4,6 +4,7 @@ using System.Collections;
 public class Movement : MonoBehaviour {
 
 	private Rigidbody rb;
+	public Animator anim;
 
 	public float velocity = 5f;
 	//public float acceleration = 40f;
@@ -23,5 +24,8 @@ public class Movement : MonoBehaviour {
 			rb.rotation = Quaternion.LookRotation(move, Vector3.up);
 		//if (rb.velocity.magnitude > maxVelocity)
 		//	rb.velocity.Scale (Vector3.one * (maxVelocity / rb.velocity.magnitude));
+		if (Input.GetAxis ("AttackFist") > 0.01f) {
+			anim.SetTrigger ("attack");
+		}
 	}
 }

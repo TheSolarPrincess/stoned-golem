@@ -15,10 +15,11 @@ public class Squishy : MonoBehaviour {
 		Vector3 splatPosition = transform.position;
 		splatPosition.y = 0.01f;
 		splat.transform.position = splatPosition;
+		GameObject.FindGameObjectWithTag ("GameController").GetComponent<Screams> ().Scream (transform.position);
 		Destroy (gameObject);
 	}
 
-	void OnCollisionEnter(Collision col) {
+	void OnTriggerEnter(Collider col) {
 		if (col.gameObject.GetComponent<Heavy> ())
 			Squish ();
 	}
