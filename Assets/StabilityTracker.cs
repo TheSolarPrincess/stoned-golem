@@ -5,6 +5,7 @@ using System.Collections;
 public class StabilityTracker : MonoBehaviour {
 
 	public Text displayText;
+	public StabilityBar displayBar;
 	public string displayLegend = "Stability: ";
 	public float displayMultiplier = 1;
 	public float initialStability = 9001;
@@ -24,12 +25,14 @@ public class StabilityTracker : MonoBehaviour {
 
 	void Start () {
 		stability = initialStability;
+		displayBar.maxStability = initialStability;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		stability -= (lossPerSecond * Time.deltaTime);
-		displayText.text = displayLegend + (displayMultiplier * Mathf.Max (0, (int)stability)).ToString ();
+		//displayText.text = displayLegend + (displayMultiplier * Mathf.Max (0, (int)stability)).ToString ();
+		displayBar.stability = stability;
 		if (stability <= 0)
 			StopThis ();
 	}

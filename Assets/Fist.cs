@@ -17,6 +17,7 @@ public class Fist : MonoBehaviour {
 		if (anim)
 			active = anim.GetCurrentAnimatorStateInfo (0).IsName ("attack");
 		fistCollider.enabled = active;
+		Debug.Log (active);
 	}
 
 	void OnTriggerEnter(Collider col) {

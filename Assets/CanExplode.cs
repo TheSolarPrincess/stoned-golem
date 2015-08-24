@@ -18,7 +18,8 @@ public class CanExplode : MonoBehaviour {
 
 	IEnumerator explosion() {
 		GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.None;
-		GetComponent<Rigidbody> ().AddTorque (Vector3.one);
+		GameObject.Destroy (GetComponent<Fist> ());
+		GameObject.Destroy (GetComponentInChildren<Fist> ());
 
 		GameObject.Destroy(parts.GetComponent<Animator>());
 		foreach (Transform child in parts.transform) {
